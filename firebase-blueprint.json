@@ -1,0 +1,41 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Ayurvedic Product",
+      "description": "An Ayurvedic product in the catalog",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "price": { "type": "number" },
+        "stock": { "type": "integer" },
+        "ingredients": { "type": "array", "items": { "type": "string" } },
+        "remedies": { "type": "array", "items": { "type": "string" } },
+        "imageUrl": { "type": "string" },
+        "category": { "type": "string" }
+      },
+      "required": ["name", "price", "stock"]
+    },
+    "User": {
+      "title": "User Profile",
+      "description": "User profile including role",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "customer"] },
+        "displayName": { "type": "string" }
+      },
+      "required": ["email", "role"]
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Collection of Ayurvedic products"
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles and roles"
+    }
+  }
+}

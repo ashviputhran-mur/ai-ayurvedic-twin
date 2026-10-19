@@ -1,0 +1,12 @@
+{
+  "name": "AyurSkin AI: Ayurvedic Digital Twin",
+  "description": "An AI-powered Ayurvedic skin analysis and predictive digital twin system. Features real-time Dosha analysis, skin health forecasting, and personalized herbal recommendations.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "AI Analysis",
+    "Digital Twin Visualization",
+    "Predictive Health"
+  ]
+}
